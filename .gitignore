@@ -9,3 +9,6 @@ yarn-error.log*
 .pnp.js
 
 .vscode/*
+/packages/sdk/node_modules/
+/apps/mpc-server/node_modules/
+.idea/*
