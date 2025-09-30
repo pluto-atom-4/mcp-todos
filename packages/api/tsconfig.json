@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "extends": "../../tsconfig.base.json",
+    "verbatimModuleSyntax": true,
+    "types": [
+      "node"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx",
+    "outDir": "./dist"
+  },
+  "exclude": ["node_modules"],
+  "strict": true
+}
