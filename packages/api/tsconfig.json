@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "extends": "../../tsconfig.base.json",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "verbatimModuleSyntax": true,
     "types": [
       "node"

@@ -7,6 +7,10 @@ app.get('/', (c) => {
   return c.text('Hello Hono!')
 })
 
+app.get("/systems/ping", (c) => {
+  return c.json({ message: "pong" });
+});
+
 serve({
   fetch: app.fetch,
   port: 3000
