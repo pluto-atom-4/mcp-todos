@@ -1,0 +1,8 @@
+### Test root endpoint
+GET http://localhost:3000/
+
+### Test ping endpoint
+GET http://localhost:3000/systems/ping
+
+### Test todos endpoint
+GET http://localhost:3000/todos
