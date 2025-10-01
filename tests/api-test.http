@@ -1,8 +1,30 @@
+@PORT = 8080
+
 ### Test root endpoint
-GET http://localhost:3000/
+GET http://localhost:{{PORT}}/
 
 ### Test ping endpoint
-GET http://localhost:3000/systems/ping
+GET http://localhost:{{PORT}}/systems/ping
 
 ### Test todos endpoint
-GET http://localhost:3000/todos
+GET http://localhost:{{PORT}}/todos
+
+### Create a new todo
+POST http://localhost:{{PORT}}/todos
+Content-Type: application/json
+
+{
+  "title": "掃除をする"
+}
+
+### Update a todo as completed
+@todoId = 1
+PUT http://localhost:{{PORT}}/todos/{{todoId}}
+Content-Type: application/json
+
+{
+  "completed": true
+}
+
+### Delete a todo
+DELETE http://localhost:{{PORT}}/todos/{{todoId}}
