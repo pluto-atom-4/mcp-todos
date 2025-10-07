@@ -13,3 +13,4 @@ yarn-error.log*
 /apps/mpc-server/node_modules/
 .idea/*
 /apps/mcp/node_modules/
+/apps/mcp/dist/
