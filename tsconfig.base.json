@@ -11,6 +11,8 @@
     },
     "esModuleInterop": true,
     "isolatedModules": true,
-    "moduleDetection": "force"
+    "moduleDetection": "force",
+    "incremental": true,
+    "composite": true
   }
 }

@@ -6,7 +6,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "pnpm tsc --project tsconfig.json && node dist/main.js"
+    "build": "pnpm tsc --build",
+    "build:clean": "pnpm tsc --build --clean",
+    "dev": "pnpm build && node dist/main.js"
   },
   "keywords": [],
   "author": "",
