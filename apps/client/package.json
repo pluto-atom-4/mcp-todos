@@ -9,7 +9,11 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ai-sdk/google": "^2.0.17",
+    "@ai-sdk/react": "^2.0.61",
+    "@modelcontextprotocol/sdk": "^1.19.1",
     "@tanstack/react-query": "^5.90.2",
+    "ai": "^5.0.61",
     "next": "15.5.4",
     "react": "19.1.0",
     "react-dom": "19.1.0",
