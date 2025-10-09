@@ -1,11 +1,13 @@
 "use client";
-import { Card, CardContent, CardHeader, CardTitle, } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle, } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 import { useChat } from "@ai-sdk/react";
 import { useQuery } from "@tanstack/react-query";
 import { AnimatePresence, motion } from "framer-motion";
-import { Bot, CheckCircle2, Plus, User } from "lucide-react";
+import { Bot, CheckCircle2, Plus, Send, User } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 type Todo = {
@@ -37,6 +39,10 @@ export default function Home() {
       console.log("Input:", input);
       setInput("");
     }
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInput(e.target.value);
   };
 
   useEffect(() => {
@@ -121,6 +127,26 @@ export default function Home() {
 
                 </div>
               </ScrollArea>
+              <CardFooter className="p-3 border-t bg-white dark:bg-slate-950">
+                <form
+                  onSubmit={handleSubmit}
+                  className="flex items-center gap-2 w-full"
+                >
+                  <Input
+                    value={input}
+                    onChange={handleInputChange}
+                    placeholder="メッセージを入力..."
+                    className="rounded-full border-gray-300 dark:border-gray-700 focus-visible:ring-blue-500"
+                  />
+                  <Button
+                    size="icon"
+                    type="submit"
+                    className="rounded-full bg-blue-500 hover:bg-blue-600 text-white"
+                  >
+                    <Send className="h-4 w-4"/>
+                  </Button>
+                </form>
+              </CardFooter>
             </CardContent>
           </Card>
           <Card
