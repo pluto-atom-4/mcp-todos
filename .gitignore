@@ -15,3 +15,6 @@ yarn-error.log*
 /apps/mcp/node_modules/
 /apps/mcp/dist/
 /.run/
+/mcp/.env
+/mcp/node_modules/
+/mcp/main.js

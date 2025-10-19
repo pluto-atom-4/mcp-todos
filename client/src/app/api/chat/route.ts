@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
     },
   });
 
-  const { messages } = await req.json();
+  const {messages} = await req.json();
   const tools = await mcpClient.tools();
 
   const result = streamText({
@@ -22,5 +22,5 @@ export async function POST(req: NextRequest) {
     },
   });
 
-  return result.toTextStreamResponse();
+  return result.toDataStreamResponse();
 }
